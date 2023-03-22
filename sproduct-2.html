@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" />
+  <link rel="icon" href="img/logoTitle.png">
+  <script src="script.js" defer></script>
+  <script src="cart.js" async></script>
+  <script src="sproduct-2.js"></script>
+  <script src="shop.js" async></script>
+  <title> Forever Fashion| &nbsp;Product Details</title>
+</head>
+
+<body>
+  <!-- NAVBAR -->
+  <section id="header">
+    <a href="#"><img src="img/logo.jpg" alt="" /></a>
+    <a href="#"><img src="img/logo.png" alt="" /></a>
+
+    <div>
+      <ul id="navbar">
+        <li><a href="index.html">Home</a></li>
+        <li><a class="active" href="shop.html">Shop</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
+     
+        <li id="lg-bag">
+          <a href="cart.html"><i class="fa-solid fa-shopping-bag"></i></a>
+        </li>
+        <a href="#" id="close"><i class="fa fa-times"></i></a>
+      </ul>
+    </div>
+    <div id="mobile">
+      <a href="cart.html"><i class="fa-solid fa-shopping-bag"></i></a>
+      <i id="bar" class="fas fa-outdent"></i>
+    </div>
+  </section>
+
+  <!-- Product details -->
+
+  <section id="prodetails" class="section-p1">
+    <div class="single-pro-image">
+      <img src="" width="100%" id="MainImg" alt="" />
+      <div class="small-img-group">
+        <div class="small-img-col">
+          <img src="" width="100%" class="small-img" alt="" />
+        </div>
+        <div class="small-img-col">
+          <img src="" width="100%" class="small-img" alt="" />
+        </div>
+        <div class="small-img-col">
+          <img src="" width="100%" class="small-img" alt="" />
+        </div>
+        <div class="small-img-col">
+          <img src="" width="100%" class="small-img" alt="" />
+        </div>
+      </div>
+    </div>
+
+    <div class="single-pro-details">
+      <h6>Home / T-Shirt</h6>
+      <h5>MANGO</h5>
+      <h4></h4>
+      <h2></h2>
+      <select name="" id="" >
+        <option value="">Select Size</option>
+        <option value="">XXL</option>
+        <option value="">XL</option>
+        <option value="">Large</option>
+        <option value="">Small</option>
+      </select>
+      <input type="number" name="" id="" value="1" min="1" />
+      <button class="normal" id="add-to-cart" >Add To Cart</button>
+      <h4 style="padding: 20px 0 15px 0;">Product Details</h4>
+      <span>The Gildon Ultra Cotton T-shirt is made from a substantial 6.0 oz.
+        per sq. yd. fabric constructed from 100% cotton, this classic fit
+        preshrunk jersey knit provides unmatched comfort with each wear.
+        Featuring a taped neck and shoulder, and a seamless double - needle
+        collar, and available in a range of colors, it offers it all in the
+        ultimate head turning package.
+      </span>
+    </div>
+  </section>
+
+  <!-- Featured products -->
+
+
+      <!-- Newsletter -->
+
+ <section id="newsletter" class="section-p1 section-m1">
+  <div class="newstext">
+    <h4> SALE</h4>
+    <h4> Collection 50% OFFER</h4>
+    <button class="white" onclick="location.href='shop.html';">Collection</button>
+  </div>
+
+</section>
+   <!-- Footer -->
+   <footer class="section-p1">
+    <div class="col">
+      <img class="logo" src="img/logo.jpg" alt="logo" />
+      <h4>Contact</h4>
+      <p><b>Address:</b> zion nagar, manamadruai, sivagangai</p>
+      <p><b>Phone:</b> +91 1234567890</p>
+      <p><b>Hours:</b> 24/7 Support</p>
+      <div class="follow">
+        <h4>Follow us</h4>
+        
+          <div class="icon">
+            <a href="https://www.instagram.com/classic_curves_fashion156/"><i class="fab fa-instagram" style="font-size:18px"></i></a>
+            <a href="tel:+916383860994" ><i class="fa fa-phone mr-5" aria-hidden="true"  style="font-size:18px"></i></a>
+            <a href="tel:+916383860994" ><i class="fab fa-whatsapp" aria-hidden="true"  style="font-size:18px"></i></a>
+            <a href="mailto:Thiruvettai123@Gamil.Com" ><i class="fa fa-envelope mr-5" aria-hidden="true"  style="font-size:18px"></i> </a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col">
+      <h4>About</h4>
+      <a href="contact.html">Track My Order</a>
+      <a href="contact.html">Delivery Information</a>
+      <a href="contact.html">Privacy Policy</a>
+      <a href="contact.html">Terms & Conditions</a>
+      
+    </div>
+    <div class="col">
+      <h4>My Account</h4>
+      <a href="shop.html">Shop</a>
+      <a href="about.html">About us</a>
+      <a href="contact.html">Contact us</a>
+      <a href="about.html">Help</a>
+    </div>
+  >
+  </footer>
+
+   <!-- Custom script -->
+
+  <script>
+    var MainImg = document.getElementById("MainImg");
+    var smallImg = document.getElementsByClassName("small-img");
+
+    var detailsSection = document.getElementsByClassName("single-pro-details")[0];
+
+    smallImg[0].onclick = function ()
+    {
+      MainImg.src = smallImg[0].src;      
+
+      detailsSection.getElementsByTagName('h4')[0].innerHTML = localStorage.getItem("p_srcSmallTitle0");
+      detailsSection.getElementsByTagName('h2')[0].innerHTML = localStorage.getItem("p_srcSmallPrice0");
+
+
+    };
+    smallImg[1].onclick = function ()
+    {
+      MainImg.src = smallImg[1].src;
+
+      detailsSection.getElementsByTagName('h4')[0].innerHTML = localStorage.getItem("p_srcSmallTitle1");
+      detailsSection.getElementsByTagName('h2')[0].innerHTML = localStorage.getItem("p_srcSmallPrice1");
+      
+    };
+    smallImg[2].onclick = function ()
+    {
+      MainImg.src = smallImg[2].src;
+
+      detailsSection.getElementsByTagName('h4')[0].innerHTML = localStorage.getItem("p_srcSmallTitle2");
+      detailsSection.getElementsByTagName('h2')[0].innerHTML = localStorage.getItem("p_srcSmallPrice2");
+    };
+    smallImg[3].onclick = function ()
+    {
+      MainImg.src = smallImg[3].src;
+
+      detailsSection.getElementsByTagName('h4')[0].innerHTML = localStorage.getItem("p_srcSmallTitle3");
+      detailsSection.getElementsByTagName('h2')[0].innerHTML = localStorage.getItem("p_srcSmallPrice3");
+    };
+
+
+  </script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</body>
+
+</html>
